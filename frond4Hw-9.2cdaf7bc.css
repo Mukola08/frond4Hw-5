@@ -1,0 +1,55 @@
+body {
+  background-color: #000;
+}
+
+.text {
+  text-align: center;
+  font-size: 20px;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 600px;
+  height: 300px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.bex {
+  border: 1.5px solid #708090;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  width: 300px;
+  display: flex;
+}
+
+.desk {
+  justify-content: center;
+  margin-top: 100px;
+  font-size: 70px;
+  display: flex;
+}
+
+.bax {
+  width: 100%;
+}
+
+.btn {
+  color: #fff;
+  background-color: #000;
+  border-radius: 7px;
+  font-size: 20px;
+}
+
+.button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+/*# sourceMappingURL=frond4Hw-9.2cdaf7bc.css.map */
