@@ -1,3 +1,22 @@
+import {
+  Chart,
+  LineController,
+  LineElement,
+  PointElement,
+  LinearScale,
+  Title,
+  CategoryScale,
+} from "chart.js";
+
+Chart.register(
+  LineController,
+  LineElement,
+  PointElement,
+  LinearScale,
+  Title,
+  CategoryScale
+);
+
 const chartData = {
   labels: [
     "1",
@@ -39,42 +58,43 @@ const chartData = {
         600, 650, 700, 750, 800, 850, 900, 950, 1000, 1050, 1100, 1150, 1200,
         1250, 1300, 1350,
       ],
-      backgroundColor: "rgba(33, 150, 243, 0.2)", 
-      borderColor: "#2196f3", 
+      backgroundColor: "#2196f3",
+      borderColor: "#2196f3",
       borderWidth: 2,
-      fill: true, 
-      tension: 0.3, 
+      fill: false,
+      tension: 0.2,
     },
   ],
 };
 
-const ctx = document.querySelector("#sales-chart").getContext("2d");
-
-const salesChart = new Chart(ctx, {
+const a = {
   type: "line",
   data: chartData,
   options: {
     responsive: true,
     plugins: {
-      legend: {
+      title: {
         display: true,
-        position: "top",
+        text: "Статистика продажів за останній місяць",
       },
     },
     scales: {
       x: {
         title: {
           display: true,
-          text: "Дні місяця",
+          text: "День",
         },
       },
       y: {
         title: {
           display: true,
-          text: "Кількість продажів",
+          text: "Продажі",
         },
-        beginAtZero: true,
+        begin: true,
       },
     },
   },
-});
+};
+
+const b = document.querySelector("#sales-chart");
+new Chart(b, a);
